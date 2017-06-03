@@ -2,12 +2,12 @@ module Main where
 
 import Order
 
-import System.Directory (getCurrentDirectory)
+import System.Directory (getCurrentDirectory, doesFileExist)
 import System.Environment (getArgs)
 import qualified Data.List as List
-import Control.Monad (liftM)
+import Control.Monad (liftM, when, unless)
+
 import System.IO (openFile, FilePath, Handle, hClose, hGetLine, hIsEOF, IOMode(ReadMode))
-import Control.Monad (unless)
 
 import Pipes
 import qualified Pipes.Prelude as P
@@ -28,17 +28,22 @@ replayCsv filePath = do
       unless eof $ do
         aCsvLine <- lift $ hGetLine fileHandle
         yield $ getOrderFromLine aCsvLine
+
         pumpOrder fileHandle
 
 main :: IO ()
 main = do
+  parentDir <- (flip (++) "/") <$> getDataDir
   fileNames <- getArgs
   mapM_ putStrLn fileNames
 
-  parentDir <- (flip (++) "/") <$> getDataDir
+  when ((List.length fileNames) == 3) $ do
+    let fileNamesFullPaths = ((++) parentDir) <$> fileNames
 
-  let firstFileName = fileNames !! 0
-
-  runEffect $ for (replayCsv (parentDir ++ firstFileName)) $ (lift . print)
+    csvFilesExistences <- mapM doesFileExist fileNamesFullPaths
+    
+    when (List.all (\x -> x == True) csvFilesExistences) $ do
+      let firstFullPath = fileNamesFullPaths !! 0
+      runEffect $ for (replayCsv firstFullPath) $ (lift . print)
   
   putStrLn "End"
