@@ -38,11 +38,15 @@ main = do
   mapM_ putStrLn fileNames
 
   when ((List.length fileNames) == 3) $ do
-    let fileNamesFullPaths = ((++) parentDir) <$> fileNames
+    putStrLn "Three input csv file names specified!\n"
+
+    let fileNamesFullPaths = List.map ((++) parentDir) fileNames
 
     csvFilesExistences <- mapM doesFileExist fileNamesFullPaths
     
-    when (List.all (\x -> x == True) csvFilesExistences) $ do
+    when (List.all ((==) True) csvFilesExistences) $ do
+      putStrLn "All input csv files exist. Processing will begin!\n"
+
       let firstFullPath = fileNamesFullPaths !! 0
       runEffect $ for (replayCsv firstFullPath) $ (lift . print)
   
