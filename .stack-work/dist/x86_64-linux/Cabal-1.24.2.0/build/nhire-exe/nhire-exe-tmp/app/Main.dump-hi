@@ -1,0 +1,304 @@
+
+==================== FINAL INTERFACE ====================
+2017-06-03 20:09:35.063094 UTC
+
+interface main@main:Main 8002
+  interface hash: ac966bf079119cd2d997f8c60edf5487
+  ABI hash: 83fb63fa5f865538a376a62c5746a1f2
+  export-list hash: 6d602bd30b3c8ff032a6577824cc1358
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 764e50b36e2e3ee5acae0d81ebf2a73f
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Main.main
+  Main.replayCsv
+module dependencies: Paths_nhire
+package dependencies: array-0.5.1.1@array-0.5.1.1 base-4.9.1.0
+                      bytestring-0.10.8.1@bytestring-0.10.8.1
+                      containers-0.5.7.1@containers-0.5.7.1
+                      deepseq-1.4.2.0@deepseq-1.4.2.0 directory-1.3.0.0@directory-1.3.0.0
+                      exceptions-0.8.3@exceptions-0.8.3-ADEDRATtUrMK1JW4zMQ9U
+                      filepath-1.4.1.1@filepath-1.4.1.1
+                      ghc-boot-th-8.0.2@ghc-boot-th-8.0.2 ghc-prim-0.5.0.0
+                      integer-gmp-1.0.0.1
+                      mmorph-1.0.9@mmorph-1.0.9-5bASEvmIkr5CpdAYXwPsn0
+                      mtl-2.2.1@mtl-2.2.1-BLKBelFsPB3BoFeSWSOYj6
+                      nhire-0.1.0.0@nhire-0.1.0.0-LujRWBlevUUL0QEIKjqvQa
+                      pipes-4.3.4@pipes-4.3.4-IzZdzyWEw6TEBmgi7OaP91
+                      regex-base-0.93.2@regex-base-0.93.2-AYjYAsBidAc8f5XNm9b2Aa
+                      regex-compat-0.95.1@regex-compat-0.95.1-7IGKoiHTSKL3opdpEZ0pO8
+                      regex-posix-0.95.2@regex-posix-0.95.2-KQJt29lnRa45d6bFn9XkFO
+                      stm-2.4.4.1@stm-2.4.4.1-JQn4hNPyYjP5m9AcbI88Ve
+                      template-haskell-2.11.1.0 time-1.6.0.1@time-1.6.0.1
+                      transformers-0.5.2.0@transformers-0.5.2.0 unix-2.7.2.1@unix-2.7.2.1
+orphans: base-4.9.1.0:GHC.Base base-4.9.1.0:GHC.Float
+         regex-base-0.93.2@regex-base-0.93.2-AYjYAsBidAc8f5XNm9b2Aa:Text.Regex.Base.Context
+         regex-posix-0.95.2@regex-posix-0.95.2-KQJt29lnRa45d6bFn9XkFO:Text.Regex.Posix.ByteString
+         regex-posix-0.95.2@regex-posix-0.95.2-KQJt29lnRa45d6bFn9XkFO:Text.Regex.Posix.ByteString.Lazy
+         regex-posix-0.95.2@regex-posix-0.95.2-KQJt29lnRa45d6bFn9XkFO:Text.Regex.Posix.Sequence
+         regex-posix-0.95.2@regex-posix-0.95.2-KQJt29lnRa45d6bFn9XkFO:Text.Regex.Posix.String
+         stm-2.4.4.1@stm-2.4.4.1-JQn4hNPyYjP5m9AcbI88Ve:Control.Monad.STM
+         time-1.6.0.1@time-1.6.0.1:Data.Time.Calendar.Gregorian
+         time-1.6.0.1@time-1.6.0.1:Data.Time.Format.Parse
+         time-1.6.0.1@time-1.6.0.1:Data.Time.LocalTime.LocalTime
+         transformers-0.5.2.0@transformers-0.5.2.0:Control.Monad.Trans.Error
+family instance modules: base-4.9.1.0:Control.Applicative
+                         base-4.9.1.0:Data.Complex base-4.9.1.0:Data.Either
+                         base-4.9.1.0:Data.Functor.Compose base-4.9.1.0:Data.Functor.Const
+                         base-4.9.1.0:Data.Functor.Identity
+                         base-4.9.1.0:Data.Functor.Product base-4.9.1.0:Data.List.NonEmpty
+                         base-4.9.1.0:Data.Monoid base-4.9.1.0:Data.Semigroup
+                         base-4.9.1.0:Data.Type.Equality base-4.9.1.0:Data.Version
+                         base-4.9.1.0:Data.Void base-4.9.1.0:GHC.Exts
+                         base-4.9.1.0:GHC.Generics base-4.9.1.0:GHC.IO.Exception
+                         base-4.9.1.0:GHC.TypeLits
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Sequence
+                         ghc-boot-th-8.0.2@ghc-boot-th-8.0.2:GHC.LanguageExtensions.Type
+                         template-haskell-2.11.1.0:Language.Haskell.TH.Syntax
+import  -/  base-4.9.1.0:Control.Monad a6784c5dab0d75c63dabec5a37843f98
+import  -/  base-4.9.1.0:Control.Monad.IO.Class 1a4384f66ee999caf5366398edb6ca7b
+import  -/  base-4.9.1.0:Data.Foldable 3e0b6967a1da89945d0e2d47266337a2
+import  -/  base-4.9.1.0:Data.Functor 5ab1dc703df5b482e77efb697833ca3c
+import  -/  base-4.9.1.0:Data.List 07ae2acca6538aa0800bd0a993ac6ac1
+import  -/  base-4.9.1.0:GHC.Base c4231c43c07e46080a26bf94094c7aa1
+import  -/  base-4.9.1.0:GHC.IO eb504c57b397cf133849f8586f15dafb
+import  -/  base-4.9.1.0:GHC.IO.Handle ba98a5b34d78cbf48b41fe58a3735c69
+import  -/  base-4.9.1.0:GHC.IO.Handle.FD dbf0d0d4f42ab1465129a88ccf7880ff
+import  -/  base-4.9.1.0:GHC.IO.Handle.Text b65719f3b262b071ab1aabeb72fc9d8b
+import  -/  base-4.9.1.0:GHC.IO.IOMode 2f5782f93b12a0d860d6d661b9fb405c
+import  -/  base-4.9.1.0:GHC.List ab8c4e523e6c479c549d3bcd5fc4a439
+import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
+import  -/  base-4.9.1.0:System.Environment 08cb808e8e6a7821e6f8cfa76a977431
+import  -/  base-4.9.1.0:System.IO e4a64a8e3dce8616da54f0ee7104f7db
+import  -/  directory-1.3.0.0@directory-1.3.0.0:System.Directory 8ff5ebd6a93811413df021d2be39a158
+import  -/  ghc-prim-0.5.0.0:GHC.Types 89f8de4f08018c9177c98d979eae0e45
+import  -/  Paths_nhire 54de03bfe886efe6c80a031ff3c2ebc5
+  exports: 9fe8fb92845c8ab14e6b94b10f458f87
+  getDataDir b2a9a8126f88fed41e350d40922e9296
+import  -/  nhire-0.1.0.0@nhire-0.1.0.0-LujRWBlevUUL0QEIKjqvQa:Order 36a2822a27631b7f2175704a75db7488
+import  -/  pipes-4.3.4@pipes-4.3.4-IzZdzyWEw6TEBmgi7OaP91:Pipes 3518ad83bd5317d3e45aa88cf10bd2e1
+import  -/  pipes-4.3.4@pipes-4.3.4-IzZdzyWEw6TEBmgi7OaP91:Pipes.Core a79db7c766759116989a847d928d55fe
+import  -/  pipes-4.3.4@pipes-4.3.4-IzZdzyWEw6TEBmgi7OaP91:Pipes.Prelude 58f5c8bb46600df3cf146d246aee4fba
+import  -/  transformers-0.5.2.0@transformers-0.5.2.0:Control.Monad.Trans.Class 45530f1305724ee3931a9be21b40ca7e
+7360e9b906f51357d7ff6fb935c19105
+  $srunEffect2 ::
+    Pipes.Internal.Proxy
+      Pipes.Internal.X () () Pipes.Internal.X GHC.Types.IO r
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, r #)
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,U> -}
+d6831ef04cb9301b090dfae6f7bb7ec7
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module Main.$trModule2 Main.$trModule1) -}
+847d9fc3b8e6f0b424199f36b4999bb2
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Main"#) -}
+24ef6042833e75ffd7aa98b83ecca98d
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "main"#) -}
+a3807a70da265f7b8e36b07350baf6f7
+  $wpumpOrder ::
+    GHC.IO.Handle.Types.Handle
+    -> (# GHC.Types.IO
+            (Pipes.Internal.Proxy x' x () Order.Order GHC.Types.IO ()) #)
+  {- Arity: 1, Strictness: <L,U>, Inline: [0] -}
+f910dfa7a058686419b00126df01b20a
+  main :: GHC.Types.IO ()
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
+fff1279874362a914475679b74b9eb7e
+  main1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case System.Environment.getArgs1 s of ds1 { (#,#) ipv ipv1 ->
+                 case Main.main4 ipv1 ipv of ds2 { (#,#) ipv2 ipv3 ->
+                 case GHC.Prim.catch#
+                        @ GHC.Base.String
+                        @ GHC.Exception.SomeException
+                        Paths_nhire.getDataDir3
+                          `cast`
+                        (GHC.Types.N:IO[0] <GHC.Base.String>_R)
+                        Paths_nhire.getDataDir2
+                        ipv2 of ds { (#,#) ipv4 ipv5 ->
+                 case Main.$srunEffect2
+                        @ ()
+                        (Main.main_go
+                           (Pipes.Internal.M
+                              @ Data.Void.Void
+                              @ ()
+                              @ ()
+                              @ Order.Order
+                              @ GHC.Types.IO
+                              @ ()
+                              (\ (s1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                               case GHC.IO.Handle.FD.openFile1
+                                      (GHC.Base.++
+                                         @ GHC.Types.Char
+                                         ipv5
+                                         (GHC.CString.unpackAppendCString#
+                                            "/"#
+                                            (GHC.List.$w!! @ GHC.Base.String ipv1 0#)))
+                                      GHC.IO.IOMode.ReadMode
+                                      s1 of ds3 { (#,#) ipv6 ipv7 ->
+                               (# ipv6, Main.main3 ipv7 #) })
+                                `cast`
+                              (Sym (GHC.Types.N:IO[0]
+                                        <Pipes.Internal.Proxy
+                                           Data.Void.Void () () Order.Order GHC.Types.IO ()>_R))))
+                        ipv4 of ds3 { (#,#) ipv6 ipv7 ->
+                 GHC.IO.Handle.Text.hPutStr2
+                   GHC.IO.Handle.FD.stdout
+                   Main.main2
+                   GHC.Types.True
+                   ipv6 } } } }) -}
+ef778d722205e911b5e8dd835700db89
+  main2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "End"#) -}
+c5e7ae06799d76c0d9f08eef7c109219
+  main3 ::
+    GHC.IO.Handle.Types.Handle
+    -> Pipes.Internal.Proxy
+         Data.Void.Void () () Order.Order GHC.Types.IO ()
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: (\ (fileHandle :: GHC.IO.Handle.Types.Handle) ->
+                 case Main.$wpumpOrder
+                        @ ()
+                        @ Pipes.Internal.X
+                        fileHandle of ww { Unit# ww1 ->
+                 let {
+                   k :: GHC.Prim.State# GHC.Prim.RealWorld
+                        -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+                              Pipes.Internal.Proxy
+                                Data.Void.Void () () Order.Order GHC.Types.IO () #)
+                     {- Arity: 1, Strictness: <S,U>,
+                        Unfolding: InlineRule (1, True, False)
+                                   (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                                    case GHC.IO.Handle.hClose1
+                                           fileHandle
+                                           s of ds1 { (#,#) ipv ipv1 ->
+                                    (# ipv,
+                                       Pipes.Internal.Pure
+                                         @ Data.Void.Void
+                                         @ ()
+                                         @ ()
+                                         @ Order.Order
+                                         @ GHC.Types.IO
+                                         @ ()
+                                         ipv1 #) }) -}
+                   = \ (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                     case GHC.IO.Handle.hClose1 fileHandle s of ds1 { (#,#) ipv ipv1 ->
+                     (# ipv,
+                        Pipes.Internal.Pure
+                          @ Data.Void.Void
+                          @ ()
+                          @ ()
+                          @ Order.Order
+                          @ GHC.Types.IO
+                          @ ()
+                          ipv1 #) }
+                 } in
+                 let {
+                   k1 :: Pipes.Internal.Proxy
+                           Data.Void.Void () () Order.Order GHC.Types.IO ()
+                   = Pipes.Internal.M
+                       @ Data.Void.Void
+                       @ ()
+                       @ ()
+                       @ Order.Order
+                       @ GHC.Types.IO
+                       @ ()
+                       k `cast`
+                       (Sym (GHC.Types.N:IO[0]
+                                 <Pipes.Internal.Proxy
+                                    Data.Void.Void () () Order.Order GHC.Types.IO ()>_R))
+                 } in
+                 Pipes.Internal.M
+                   @ Data.Void.Void
+                   @ ()
+                   @ ()
+                   @ Order.Order
+                   @ GHC.Types.IO
+                   @ ()
+                   (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                    case ww1
+                           `cast`
+                         (GHC.Types.N:IO[0]
+                              <Pipes.Internal.Proxy
+                                 Data.Void.Void () () Order.Order GHC.Types.IO ()>_R)
+                           s of ds1 { (#,#) ipv ipv1 ->
+                    (# ipv,
+                       Pipes.Internal._bind
+                         @ GHC.Types.IO
+                         @ Data.Void.Void
+                         @ ()
+                         @ ()
+                         @ Order.Order
+                         @ ()
+                         @ ()
+                         GHC.Base.$fMonadIO
+                         ipv1
+                         (\ (ds :: ()) -> k1) #) })
+                     `cast`
+                   (Sym (GHC.Types.N:IO[0]
+                             <Pipes.Internal.Proxy
+                                Data.Void.Void () () Order.Order GHC.Types.IO ()>_R)) }) -}
+72d901f2f26620fcabc1b3cd502aaedf
+  main4 ::
+    [GHC.Base.String]
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 2, Strictness: <S,1*U><S,U> -}
+c77b2af07756eb1ec48c1d7a9e05b53c
+  main5 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1,
+     Unfolding: (GHC.TopHandler.runMainIO1
+                   @ ()
+                   Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R))) -}
+148e90106b77ab22956c3042283812b7
+  main_go ::
+    Pipes.Internal.Proxy
+      Pipes.Internal.X () () Order.Order GHC.Types.IO ()
+    -> Pipes.Internal.Proxy
+         Pipes.Internal.X () () Pipes.Internal.X GHC.Types.IO ()
+  {- Arity: 1, Strictness: <S,1*U> -}
+69750b0ccb9953736d6f9c2831316e88
+  replayCsv ::
+    GHC.IO.FilePath -> Pipes.Core.Producer Order.Order GHC.Types.IO ()
+  {- Arity: 1, Strictness: <L,U>m3,
+     Unfolding: InlineRule (1, True, False)
+                (\ (filePath :: GHC.IO.FilePath) ->
+                 Pipes.Internal.M
+                   @ Data.Void.Void
+                   @ ()
+                   @ ()
+                   @ Order.Order
+                   @ GHC.Types.IO
+                   @ ()
+                   (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                    case GHC.IO.Handle.FD.openFile1
+                           filePath
+                           GHC.IO.IOMode.ReadMode
+                           s of ds1 { (#,#) ipv ipv1 ->
+                    (# ipv, Main.main3 ipv1 #) })
+                     `cast`
+                   (Sym (GHC.Types.N:IO[0]
+                             <Pipes.Internal.Proxy
+                                Data.Void.Void () () Order.Order GHC.Types.IO ()>_R))) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+

@@ -1,0 +1,540 @@
+
+==================== FINAL INTERFACE ====================
+2017-06-03 20:09:33.912386 UTC
+
+interface nhire-0.1.0.0-LujRWBlevUUL0QEIKjqvQa:Order 8002
+  interface hash: fb76161ef418182bb8cb59c194149138
+  ABI hash: 36a2822a27631b7f2175704a75db7488
+  export-list hash: 2d74ec01746da0a22d38b52a6f68774e
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: ab396f11155bd696ab63895436e6f1df
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Order.getOrderFromLine
+  Order.Currency
+  Order.Direction
+  Order.Order
+module dependencies:
+package dependencies: array-0.5.1.1@array-0.5.1.1 base-4.9.1.0
+                      bytestring-0.10.8.1@bytestring-0.10.8.1
+                      containers-0.5.7.1@containers-0.5.7.1
+                      deepseq-1.4.2.0@deepseq-1.4.2.0 ghc-prim-0.5.0.0
+                      integer-gmp-1.0.0.1
+                      regex-base-0.93.2@regex-base-0.93.2-AYjYAsBidAc8f5XNm9b2Aa
+                      regex-compat-0.95.1@regex-compat-0.95.1-7IGKoiHTSKL3opdpEZ0pO8
+                      regex-posix-0.95.2@regex-posix-0.95.2-KQJt29lnRa45d6bFn9XkFO
+orphans: base-4.9.1.0:GHC.Base base-4.9.1.0:GHC.Float
+         regex-base-0.93.2@regex-base-0.93.2-AYjYAsBidAc8f5XNm9b2Aa:Text.Regex.Base.Context
+         regex-posix-0.95.2@regex-posix-0.95.2-KQJt29lnRa45d6bFn9XkFO:Text.Regex.Posix.ByteString
+         regex-posix-0.95.2@regex-posix-0.95.2-KQJt29lnRa45d6bFn9XkFO:Text.Regex.Posix.ByteString.Lazy
+         regex-posix-0.95.2@regex-posix-0.95.2-KQJt29lnRa45d6bFn9XkFO:Text.Regex.Posix.Sequence
+         regex-posix-0.95.2@regex-posix-0.95.2-KQJt29lnRa45d6bFn9XkFO:Text.Regex.Posix.String
+family instance modules: base-4.9.1.0:Control.Applicative
+                         base-4.9.1.0:Data.Complex base-4.9.1.0:Data.Either
+                         base-4.9.1.0:Data.Functor.Const base-4.9.1.0:Data.Functor.Identity
+                         base-4.9.1.0:Data.List.NonEmpty base-4.9.1.0:Data.Monoid
+                         base-4.9.1.0:Data.Semigroup base-4.9.1.0:Data.Type.Equality
+                         base-4.9.1.0:Data.Version base-4.9.1.0:Data.Void
+                         base-4.9.1.0:GHC.Exts base-4.9.1.0:GHC.Generics
+                         base-4.9.1.0:GHC.IO.Exception base-4.9.1.0:GHC.TypeLits
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Sequence
+import  -/  base-4.9.1.0:Data.List 07ae2acca6538aa0800bd0a993ac6ac1
+import  -/  base-4.9.1.0:GHC.Base c4231c43c07e46080a26bf94094c7aa1
+import  -/  base-4.9.1.0:GHC.List ab8c4e523e6c479c549d3bcd5fc4a439
+import  -/  base-4.9.1.0:GHC.Show a027f5ac24879eaba752f44aa90fe511
+import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
+import  -/  base-4.9.1.0:Text.Read 75c59863e882ebaec4532e9465e2ee9b
+import  -/  regex-compat-0.95.1@regex-compat-0.95.1-7IGKoiHTSKL3opdpEZ0pO8:Text.Regex 49a2c25dbefd77eec517d94daa11b84b
+960b363fc55769f3c8c5edd8f8074624
+  $fShowCurrency :: GHC.Show.Show Order.Currency
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Order.Currency
+                  Order.$fShowCurrency_$cshowsPrec
+                  Order.$fShowCurrency_$cshow
+                  Order.$fShowCurrency_$cshowList -}
+51113b1760398b7b2f1cb2fa9df27884
+  $fShowCurrency1 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "USD"#) -}
+c188343678c183449c4b0055ba91ea05
+  $fShowCurrency2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "GBP"#) -}
+c4f4a36b5a2249ce5619b77196778768
+  $fShowCurrency3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "EUR"#) -}
+960b363fc55769f3c8c5edd8f8074624
+  $fShowCurrency_$cshow :: Order.Currency -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Order.Currency) ->
+                 case x of wild {
+                   Order.EUR -> Order.$fShowCurrency3
+                   Order.GBP -> Order.$fShowCurrency2
+                   Order.USD -> Order.$fShowCurrency1 }) -}
+960b363fc55769f3c8c5edd8f8074624
+  $fShowCurrency_$cshowList :: [Order.Currency] -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (GHC.Show.showList__
+                   @ Order.Currency
+                   Order.$w$cshowsPrec) -}
+960b363fc55769f3c8c5edd8f8074624
+  $fShowCurrency_$cshowsPrec ::
+    GHC.Types.Int -> Order.Currency -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,A><S,1*U><L,1*U>, Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, True)
+                (\ (w :: GHC.Types.Int)
+                   (w1 :: Order.Currency)
+                   (w2 :: GHC.Base.String) ->
+                 Order.$w$cshowsPrec w1 w2) -}
+5bc1153de679ee6cdd4ea8764b59e80b
+  $fShowDirection :: GHC.Show.Show Order.Direction
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Order.Direction
+                  Order.$fShowDirection_$cshowsPrec
+                  Order.$fShowDirection_$cshow
+                  Order.$fShowDirection_$cshowList -}
+5bc1153de679ee6cdd4ea8764b59e80b
+  $fShowDirection1 :: Order.Direction -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <S,1*U><L,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (ds :: Order.Direction) (eta :: GHC.Base.String) ->
+                 case ds of wild {
+                   Order.BUY
+                   -> GHC.Base.augment
+                        @ GHC.Types.Char
+                        (\ @ b
+                           (c :: GHC.Types.Char -> b -> b)[OneShot]
+                           (n :: b)[OneShot] ->
+                         GHC.Base.foldr @ GHC.Types.Char @ b c n Order.$fShowDirection3)
+                        eta
+                   Order.SELL
+                   -> GHC.Base.augment
+                        @ GHC.Types.Char
+                        (\ @ b
+                           (c :: GHC.Types.Char -> b -> b)[OneShot]
+                           (n :: b)[OneShot] ->
+                         GHC.Base.foldr @ GHC.Types.Char @ b c n Order.$fShowDirection2)
+                        eta }) -}
+de16fe6e43f3d88aef2de5242fa0d2dc
+  $fShowDirection2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "SELL"#) -}
+4b076fde7af093b920330b23bfd1cd32
+  $fShowDirection3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "BUY"#) -}
+5bc1153de679ee6cdd4ea8764b59e80b
+  $fShowDirection_$cshow :: Order.Direction -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Order.Direction) ->
+                 case x of wild {
+                   Order.BUY -> Order.$fShowDirection3
+                   Order.SELL -> Order.$fShowDirection2 }) -}
+5bc1153de679ee6cdd4ea8764b59e80b
+  $fShowDirection_$cshowList :: [Order.Direction] -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (GHC.Show.showList__
+                   @ Order.Direction
+                   Order.$fShowDirection1) -}
+5bc1153de679ee6cdd4ea8764b59e80b
+  $fShowDirection_$cshowsPrec ::
+    GHC.Types.Int -> Order.Direction -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,A><S,1*U><L,1*U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ (ds :: GHC.Types.Int)
+                   (ds1 :: Order.Direction)
+                   (eta :: GHC.Base.String) ->
+                 case ds1 of wild {
+                   Order.BUY
+                   -> GHC.Base.augment
+                        @ GHC.Types.Char
+                        (\ @ b
+                           (c :: GHC.Types.Char -> b -> b)[OneShot]
+                           (n :: b)[OneShot] ->
+                         GHC.Base.foldr @ GHC.Types.Char @ b c n Order.$fShowDirection3)
+                        eta
+                   Order.SELL
+                   -> GHC.Base.augment
+                        @ GHC.Types.Char
+                        (\ @ b
+                           (c :: GHC.Types.Char -> b -> b)[OneShot]
+                           (n :: b)[OneShot] ->
+                         GHC.Base.foldr @ GHC.Types.Char @ b c n Order.$fShowDirection2)
+                        eta }) -}
+b193663f9d8bd8a422eb5af573fabc3c
+  $fShowOrder :: GHC.Show.Show Order.Order
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Order.Order
+                  Order.$fShowOrder_$cshowsPrec
+                  Order.$fShowOrder_$cshow
+                  Order.$fShowOrder_$cshowList -}
+b193663f9d8bd8a422eb5af573fabc3c
+  $fShowOrder1 :: Order.Order -> GHC.Base.String -> [GHC.Types.Char]
+  {- Arity: 2,
+     Unfolding: (\ (x :: Order.Order) (s :: GHC.Base.String)[OneShot] ->
+                 case x of ww { Order.Order ww1 ww2 ww3 ww4 ->
+                 GHC.Base.++ @ GHC.Types.Char (Order.$w$cshow ww2 ww3 ww4) s }) -}
+b193663f9d8bd8a422eb5af573fabc3c
+  $fShowOrder_$cshow :: Order.Order -> GHC.Base.String
+  {- Arity: 1, Strictness: <S(LSLL),1*U(A,1*U,1*U(U),1*U)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w :: Order.Order) ->
+                 case w of ww { Order.Order ww1 ww2 ww3 ww4 ->
+                 Order.$w$cshow ww2 ww3 ww4 }) -}
+b193663f9d8bd8a422eb5af573fabc3c
+  $fShowOrder_$cshowList :: [Order.Order] -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <S,1*U><L,U>,
+     Unfolding: (\ (ls :: [Order.Order]) (s :: GHC.Base.String) ->
+                 GHC.Show.showList__ @ Order.Order Order.$fShowOrder1 ls s) -}
+b193663f9d8bd8a422eb5af573fabc3c
+  $fShowOrder_$cshowsPrec ::
+    GHC.Types.Int -> Order.Order -> GHC.Show.ShowS
+  {- Arity: 3,
+     Strictness: <L,A><S(LSLL),1*U(A,1*U,1*U(U),1*U)><L,1*U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ (ds :: GHC.Types.Int)
+                   (x :: Order.Order)
+                   (s :: GHC.Base.String) ->
+                 GHC.Base.augment
+                   @ GHC.Types.Char
+                   (\ @ b
+                      (c :: GHC.Types.Char -> b -> b)[OneShot]
+                      (n :: b)[OneShot] ->
+                    GHC.Base.foldr
+                      @ GHC.Types.Char
+                      @ b
+                      c
+                      n
+                      (Order.$fShowOrder_$cshow x))
+                   s) -}
+2c10c206e287f27ab3d802fbe80647f7
+  $tc'BUY :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   6315178616456989053##
+                   1127307289887533659##
+                   Order.$trModule
+                   Order.$tc'BUY1) -}
+c9ef8611872af530ffbf3608f2a46db0
+  $tc'BUY1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'BUY"#) -}
+b780184f42a64118478a8bb68ea9492d
+  $tc'EUR :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   15353934254042476162##
+                   16440174568695001607##
+                   Order.$trModule
+                   Order.$tc'EUR1) -}
+8bd6e4d1325f49023ba510aa6d9930d8
+  $tc'EUR1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'EUR"#) -}
+b95242922aa1f3b6db31201e518c52c2
+  $tc'GBP :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   15855411523349291427##
+                   6581740736420166594##
+                   Order.$trModule
+                   Order.$tc'GBP1) -}
+b1a9c8eb560394bbbc3f0a6463c4a48e
+  $tc'GBP1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'GBP"#) -}
+4d741cb9765d662d2f64777c6e12cd69
+  $tc'Order :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   2235696726670978488##
+                   9113696469259231129##
+                   Order.$trModule
+                   Order.$tc'Order1) -}
+ed6315a97c22f45e371ac6ad832d66c2
+  $tc'Order1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Order"#) -}
+0343b10089704f34e2243c4cd850c412
+  $tc'SELL :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   2886215065256999697##
+                   1283789744723742032##
+                   Order.$trModule
+                   Order.$tc'SELL1) -}
+ccfa014228cbfc5f722e211bb19b3f36
+  $tc'SELL1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'SELL"#) -}
+b27f376e5ac569a97f6e6fddecfb9434
+  $tc'USD :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   1640099003086760173##
+                   4263542815763790994##
+                   Order.$trModule
+                   Order.$tc'USD1) -}
+ddb78da6d2f1972bf9a2b00328d6abaa
+  $tc'USD1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'USD"#) -}
+ae17ab56c73e4a6d8423303934fd50df
+  $tcCurrency :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   8917758191276785459##
+                   10866493770186054481##
+                   Order.$trModule
+                   Order.$tcCurrency1) -}
+395ecb7789215af1bccbe6bcbf0bb13a
+  $tcCurrency1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Currency"#) -}
+658f99659ef008b79a0285fec658e814
+  $tcDirection :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   8439881123984334874##
+                   2811885736181659797##
+                   Order.$trModule
+                   Order.$tcDirection1) -}
+987467c837d453063de432822ee7fe48
+  $tcDirection1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Direction"#) -}
+3d4179d688db92b1403d6891cef01edc
+  $tcOrder :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   6636543613981177240##
+                   7189442031334477252##
+                   Order.$trModule
+                   Order.$trModule1) -}
+a8561c7e45c01873e6ad4ca0bc3a8b47
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module Order.$trModule2 Order.$trModule1) -}
+3c428bea6bded84e0f55ca3e12dd4817
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Order"#) -}
+c1d7589249a199eba0e135927f03194a
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "nhire-0.1.0.0-LujRWBlevUUL0QEIKjqvQa"#) -}
+426d5dc80e7448f3a95ca7ab6b1d2908
+  $w$cshow ::
+    Order.Currency
+    -> GHC.Types.Int -> Order.Direction -> GHC.Base.String
+  {- Arity: 3, Strictness: <S,1*U><L,1*U(U)><L,1*U>, Inline: [0],
+     Unfolding: (\ (ww :: Order.Currency)
+                   (ww1 :: GHC.Types.Int)
+                   (ww2 :: Order.Direction) ->
+                 let {
+                   arg :: [GHC.Types.Char]
+                   = GHC.CString.unpackAppendCString#
+                       " "#
+                       (case ww1 of ww3 { GHC.Types.I# ww4 ->
+                        case GHC.Show.$wshowSignedInt
+                               0#
+                               ww4
+                               (GHC.Types.[] @ GHC.Types.Char) of ww5 { (#,#) ww6 ww7 ->
+                        GHC.Base.++
+                          @ GHC.Types.Char
+                          (GHC.Types.: @ GHC.Types.Char ww6 ww7)
+                          (GHC.CString.unpackAppendCString#
+                             " "#
+                             (case ww2 of wild {
+                                Order.BUY -> Order.$fShowDirection3
+                                Order.SELL -> Order.$fShowDirection2 })) } })
+                 } in
+                 case ww of wild {
+                   Order.EUR -> GHC.Base.++ @ GHC.Types.Char Order.$fShowCurrency3 arg
+                   Order.GBP -> GHC.Base.++ @ GHC.Types.Char Order.$fShowCurrency2 arg
+                   Order.USD
+                   -> GHC.Base.++ @ GHC.Types.Char Order.$fShowCurrency1 arg }) -}
+960b363fc55769f3c8c5edd8f8074624
+  $w$cshowsPrec ::
+    Order.Currency -> GHC.Base.String -> GHC.Base.String
+  {- Arity: 2, Strictness: <S,1*U><L,1*U>, Inline: [0],
+     Unfolding: (\ (w :: Order.Currency) (w1 :: GHC.Base.String) ->
+                 case w of wild {
+                   Order.EUR -> GHC.Base.++ @ GHC.Types.Char Order.$fShowCurrency3 w1
+                   Order.GBP -> GHC.Base.++ @ GHC.Types.Char Order.$fShowCurrency2 w1
+                   Order.USD
+                   -> GHC.Base.++ @ GHC.Types.Char Order.$fShowCurrency1 w1 }) -}
+90064cfe7505617d2388c0007779406f
+  $wgetOrderFromLine ::
+    GHC.Base.String
+    -> (# GHC.Types.Int, Order.Currency, GHC.Types.Int,
+          Order.Direction #)
+  {- Arity: 1, Strictness: <L,1*U>, Inline: [0],
+     Unfolding: (\ (w :: GHC.Base.String) ->
+                 let {
+                   orderParams :: [GHC.Base.String]
+                   = case w of wild {
+                       [] -> GHC.Types.[] @ GHC.Base.String
+                       : ipv ipv1
+                       -> case Text.Regex.splitRegex_$s$wgo
+                                 (GHC.Base.map
+                                    @ (GHC.Arr.Array
+                                         GHC.Types.Int
+                                         (Text.Regex.Base.RegexLike.MatchOffset,
+                                          Text.Regex.Base.RegexLike.MatchLength))
+                                    @ (Text.Regex.Base.RegexLike.MatchOffset,
+                                       Text.Regex.Base.RegexLike.MatchLength)
+                                    Text.Regex.splitRegex1
+                                    (Text.Regex.Posix.String.$fRegexLikeRegex[]_$cmatchAll
+                                       Order.getOrderFromLine6
+                                       wild))
+                                 ipv
+                                 ipv1
+                                 0# of ww { (#,#) ww1 ww2 ->
+                          GHC.Types.: @ [GHC.Types.Char] ww1 ww2 } }
+                 } in
+                 (# case Text.Read.readEither6
+                           @ GHC.Types.Int
+                           (Text.ParserCombinators.ReadP.run
+                              @ GHC.Types.Int
+                              Order.getOrderFromLine5
+                              (GHC.List.$w!! @ GHC.Base.String orderParams 0#)) of wild {
+                      [] -> Order.getOrderFromLine4
+                      : x ds
+                      -> case ds of wild1 {
+                           [] -> x : ipv ipv1 -> Order.getOrderFromLine3 } },
+                    let {
+                      ds :: [GHC.Types.Char]
+                      = GHC.List.$w!! @ GHC.Base.String orderParams 1#
+                    } in
+                    case GHC.Base.eqString ds Order.$fShowCurrency3 of wild {
+                      GHC.Types.False
+                      -> case GHC.Base.eqString ds Order.$fShowCurrency2 of wild1 {
+                           GHC.Types.False
+                           -> case GHC.Base.eqString ds Order.$fShowCurrency1 of wild2 {
+                                GHC.Types.False -> Order.getOrderFromLine2
+                                GHC.Types.True -> Order.USD }
+                           GHC.Types.True -> Order.GBP }
+                      GHC.Types.True -> Order.EUR },
+                    case Text.Read.readEither6
+                           @ GHC.Types.Int
+                           (Text.ParserCombinators.ReadP.run
+                              @ GHC.Types.Int
+                              Order.getOrderFromLine5
+                              (GHC.List.$w!! @ GHC.Base.String orderParams 2#)) of wild {
+                      [] -> Order.getOrderFromLine4
+                      : x ds
+                      -> case ds of wild1 {
+                           [] -> x : ipv ipv1 -> Order.getOrderFromLine3 } },
+                    let {
+                      ds :: [GHC.Types.Char]
+                      = GHC.List.$w!! @ GHC.Base.String orderParams 3#
+                    } in
+                    case GHC.Base.eqString ds Order.$fShowDirection3 of wild {
+                      GHC.Types.False
+                      -> case GHC.Base.eqString ds Order.$fShowDirection2 of wild1 {
+                           GHC.Types.False -> Order.getOrderFromLine1
+                           GHC.Types.True -> Order.SELL }
+                      GHC.Types.True -> Order.BUY } #)) -}
+960b363fc55769f3c8c5edd8f8074624
+  data Currency = EUR | GBP | USD
+5bc1153de679ee6cdd4ea8764b59e80b
+  data Direction = BUY | SELL
+b193663f9d8bd8a422eb5af573fabc3c
+  data Order
+    = Order {timestamp :: GHC.Types.Int,
+             currency :: Order.Currency,
+             quantity :: GHC.Types.Int,
+             orderType :: Order.Direction}
+58204c30827bc964c872de8dd279e78e
+  currency :: Order.Order -> Order.Currency
+  RecSel Left Order.Order
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LSLL),1*U(A,1*U,A,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Order.Order) ->
+                 case ds of wild { Order.Order ds1 ds2 ds3 ds4 -> ds2 }) -}
+8912b0cb103d217b9f2229bc80affd4d
+  getOrderFromLine :: GHC.Base.String -> Order.Order
+  {- Arity: 1, Strictness: <L,1*U>m, Inline: INLINE[0],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w :: GHC.Base.String) ->
+                 case Order.$wgetOrderFromLine w of ww { (#,,,#) ww1 ww2 ww3 ww4 ->
+                 Order.Order ww1 ww2 ww3 ww4 }) -}
+67f5880829a6b255bd5a09a4501128a6
+  getOrderFromLine1 :: Order.Direction
+  {- Strictness: x -}
+d1244811f4a2ae6d8082dd978d0d74cb
+  getOrderFromLine2 :: Order.Currency
+  {- Strictness: x -}
+4b3b31cdd98a7ce2219a04422185a3b7
+  getOrderFromLine3 :: GHC.Types.Int
+  {- Strictness: x -}
+74e3b3beae369d625faa2bd3ce887167
+  getOrderFromLine4 :: GHC.Types.Int
+  {- Strictness: x -}
+4a3722d7f9911f0b3285ab449e54f5ea
+  getOrderFromLine5 :: Text.ParserCombinators.ReadP.P GHC.Types.Int
+  {- Unfolding: (GHC.Read.$fReadInt3
+                   GHC.Read.$fReadInt_$sconvertInt
+                   Text.ParserCombinators.ReadPrec.minPrec
+                   @ GHC.Types.Int
+                   (Text.Read.readEither5 @ GHC.Types.Int)) -}
+45f19df8688fbdc5b817e73b792703ac
+  getOrderFromLine6 :: Text.Regex.Posix.Wrap.Regex
+  {- Unfolding: (Text.Regex.Posix.String.$fRegexMakerRegexCompOptionExecOption[]_$cmakeRegexOpts
+                   Text.Regex.mkRegex1
+                     `cast`
+                   (Trans
+                        (Sym (Foreign.C.Types.N:CInt[0]))
+                        (Sym (Text.Regex.Posix.Wrap.N:CompOption[0])))
+                   Text.Regex.Posix.Wrap.execBlank1
+                     `cast`
+                   (Trans
+                        (Sym (Foreign.C.Types.N:CInt[0]))
+                        (Sym (Text.Regex.Posix.Wrap.N:ExecOption[0])))
+                   Order.getOrderFromLine7) -}
+b69626914aaf8e5a0c3f396cf7035fe4
+  getOrderFromLine7 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# ","#) -}
+40dafabc1b70a86799f583ecc23dce57
+  orderType :: Order.Order -> Order.Direction
+  RecSel Left Order.Order
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LLLS),1*U(A,A,A,1*U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Order.Order) ->
+                 case ds of wild { Order.Order ds1 ds2 ds3 ds4 -> ds4 }) -}
+2c55ac25c45d75c91811cad7385f45c5
+  quantity :: Order.Order -> GHC.Types.Int
+  RecSel Left Order.Order
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LLSL),1*U(A,A,1*U(U),A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Order.Order) ->
+                 case ds of wild { Order.Order ds1 ds2 ds3 ds4 -> ds3 }) -}
+ae1d4302b5d9baf8374729990b71ef6a
+  timestamp :: Order.Order -> GHC.Types.Int
+  RecSel Left Order.Order
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(SLLL),1*U(1*U(U),A,A,A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Order.Order) ->
+                 case ds of wild { Order.Order ds1 ds2 ds3 ds4 -> ds1 }) -}
+instance GHC.Show.Show [Order.Currency] = Order.$fShowCurrency
+instance GHC.Show.Show [Order.Direction] = Order.$fShowDirection
+instance GHC.Show.Show [Order.Order] = Order.$fShowOrder
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+
