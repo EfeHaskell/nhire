@@ -2,6 +2,7 @@ module Order(
   Order,
   Currency,
   Direction,
+  timestamp,
   getOrderFromLine
 ) where
 
@@ -16,6 +17,7 @@ data Order = Order {timestamp :: Int, currency :: Currency, quantity :: Int, ord
 instance Show Order where
   show (Order timeStamp currency quantity orderType) = 
     show currency ++ " " ++ show quantity ++ " " ++ show orderType
+
 
 getOrderFromLine :: String -> Order
 getOrderFromLine aCsvLine = Order orderTime orderCurrency orderQuantity orderType

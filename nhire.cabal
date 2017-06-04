@@ -23,7 +23,7 @@ Data-Files:
 library
   hs-source-dirs:      src
   exposed-modules:     Order
-  build-depends:       base >= 4.7 && < 5, directory, regex-compat, pipes
+  build-depends:       base >= 4.7 && < 5, time, directory, regex-compat, pipes
   default-language:    Haskell2010
 
 executable nhire-exe
@@ -31,7 +31,7 @@ executable nhire-exe
   main-is:             Main.hs
   ghc-options:         -threaded -rtsopts -with-rtsopts=-N
   build-depends:       base
-                     , nhire, directory, regex-compat, pipes
+                     , nhire, time, directory, regex-compat, pipes
   default-language:    Haskell2010
 
 test-suite nhire-test

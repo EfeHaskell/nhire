@@ -35,6 +35,13 @@
   (major1) == 0 && (major2) <  95 || \
   (major1) == 0 && (major2) == 95 && (minor) <= 1)
 
+/* package time-1.6.0.1 */
+#define VERSION_time "1.6.0.1"
+#define MIN_VERSION_time(major1,major2,minor) (\
+  (major1) <  1 || \
+  (major1) == 1 && (major2) <  6 || \
+  (major1) == 1 && (major2) == 6 && (minor) <= 0)
+
 /* tool gcc-5.4.0 */
 #define TOOL_VERSION_gcc "5.4.0"
 #define MIN_TOOL_VERSION_gcc(major1,major2,minor) (\
@@ -91,7 +98,7 @@
   (major1) == 2 && (major2) <  26 || \
   (major1) == 2 && (major2) == 26 && (minor) <= 0)
 
-#define CURRENT_COMPONENT_ID "nhire-0.1.0.0-LujRWBlevUUL0QEIKjqvQa"
+#define CURRENT_COMPONENT_ID "nhire-0.1.0.0-ICMHthDixsK7WtvFeupBAd"
 
-#define CURRENT_PACKAGE_KEY "nhire-0.1.0.0-LujRWBlevUUL0QEIKjqvQa"
+#define CURRENT_PACKAGE_KEY "nhire-0.1.0.0-ICMHthDixsK7WtvFeupBAd"
 

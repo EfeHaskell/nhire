@@ -30,7 +30,7 @@ version = Version [0,1,0,0] []
 bindir, libdir, dynlibdir, datadir, libexecdir, sysconfdir :: FilePath
 
 bindir     = "/home/eariaroo/Documents/projects/haskell/nhire/.stack-work/install/x86_64-linux/lts-8.16/8.0.2/bin"
-libdir     = "/home/eariaroo/Documents/projects/haskell/nhire/.stack-work/install/x86_64-linux/lts-8.16/8.0.2/lib/x86_64-linux-ghc-8.0.2/nhire-0.1.0.0-LujRWBlevUUL0QEIKjqvQa"
+libdir     = "/home/eariaroo/Documents/projects/haskell/nhire/.stack-work/install/x86_64-linux/lts-8.16/8.0.2/lib/x86_64-linux-ghc-8.0.2/nhire-0.1.0.0-ICMHthDixsK7WtvFeupBAd"
 dynlibdir  = "/home/eariaroo/Documents/projects/haskell/nhire/.stack-work/install/x86_64-linux/lts-8.16/8.0.2/lib/x86_64-linux-ghc-8.0.2"
 datadir    = "/home/eariaroo/Documents/projects/haskell/nhire/.stack-work/install/x86_64-linux/lts-8.16/8.0.2/share/x86_64-linux-ghc-8.0.2/nhire-0.1.0.0"
 libexecdir = "/home/eariaroo/Documents/projects/haskell/nhire/.stack-work/install/x86_64-linux/lts-8.16/8.0.2/libexec"
